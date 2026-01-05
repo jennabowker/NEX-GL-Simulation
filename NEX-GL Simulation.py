@@ -464,6 +464,7 @@ def run_simulation(context, mean_kin_m, mean_kin_w, sd_kin_m, sd_kin_w, max_conn
                             candidate.move_to_level_location()
 
         # Define function to calculate network openness for data collection
+        # The network effective size based on Burt’s (1992) definition, calculated using Borgatti’s (1997) expression and is the ego’s degree minus average degree of alters
         def calculate_network_openness(self, agent):
             agent.DC =len(agent.social_contacts)
             ego_degree = len(agent.social_contacts)
